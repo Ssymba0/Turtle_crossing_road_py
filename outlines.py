@@ -11,20 +11,18 @@ class Road(Turtle):
     def create_road(self):
         self.up()
         go_x = 300
-        go_y = -255
-        self.goto(go_x, go_y)
         self.seth(180)
-        positions = [-100, 50, 150, 255]
-        for i in range(1,5):
+        positions = [-250, -125, 0, 125, 250]
+        for i in range(5):
+            self.goto(go_x, positions[i])
             if i % 2 :
-                for j1 in range(0,300,30):
-                    self.down()
-                    self.fd(60)
-            else :
-                for j2 in range(0, 300, 30):
+                for j1 in range(0, 300, 30):
                     self.up()
                     self.fd(30)
                     self.down()
                     self.fd(30)
+            else :
+                for j2 in range(0,300,30):
+                    self.down()
+                    self.fd(60)
             self.up()
-            self.goto(go_x, positions[i - 1])
