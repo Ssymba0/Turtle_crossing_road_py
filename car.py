@@ -15,7 +15,7 @@ class Car():
         self.carspeed = 5
 
     def create_left_car(self):
-        random_chance = random.randint(1, 5)
+        random_chance = random.randint(1, 6)
         if random_chance == 1:
             vehicule = Turtle('square')
             vehicule.color(random.choice(COLORS))
@@ -25,7 +25,7 @@ class Car():
             self.left_traffic.append(vehicule)
 
     def create_right_car(self):
-        random_chance = random.randint(1, 5)
+        random_chance = random.randint(1, 6)
         if random_chance == 1:
             vehicule = Turtle('square')
             vehicule.color(random.choice(COLORS))
